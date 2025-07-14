@@ -1,97 +1,147 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-# Getting Started
+# 📸 Feed-Insta
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+Este é um aplicativo mobile construído com **React Native** que simula o **feed do Instagram**. Você verá postagens com imagens, nomes de usuários, descrições e poderá **curtir ou descurtir** as publicações — exatamente como no Instagram real, mas em versão simplificada.
 
-## Step 1: Start Metro
+![React Native](https://img.shields.io/badge/react--native-mobile--app-blueviolet)
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## ✨ Funcionalidades
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+- Exibição de postagens com:
+  - Foto de perfil
+  - Nome do usuário
+  - Imagem da publicação
+  - Descrição
+  - Número de curtidas
+- Ação de "curtir/descurtir" com troca dinâmica de ícone
+- Scroll de feed com `FlatList`
+- Interface inspirada na estrutura do Instagram
 
-```sh
-# Using npm
+---
+
+## 🚀 Como rodar o projeto
+
+> **Nota:** Certifique-se de seguir o guia oficial de configuração do ambiente React Native:  
+> 👉 [Set up Your Environment](https://reactnative.dev/docs/environment-setup)
+
+### 1. Clone o repositório
+
+```bash
+git clone https://github.com/jefferson-barroso/Feed-Insta.git
+cd Feed-Insta
+````
+
+### 2. Instale as dependências
+
+```bash
+# Usando npm
+npm install
+
+# ou Yarn
+yarn
+```
+
+---
+
+### 3. Inicie o servidor Metro
+
+```bash
+# npm
 npm start
 
-# OR using Yarn
+# ou Yarn
 yarn start
 ```
 
-## Step 2: Build and run your app
+---
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+### 4. Execute o app no emulador ou dispositivo
 
-### Android
+#### Android
 
-```sh
-# Using npm
+```bash
 npm run android
-
-# OR using Yarn
+# ou
 yarn android
 ```
 
-### iOS
+#### iOS (Mac apenas)
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+> Antes de tudo, instale os pods com:
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
+```bash
+cd ios
+pod install
 ```
 
-Then, and every time you update your native dependencies, run:
+Depois, execute:
 
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
+```bash
 npm run ios
-
-# OR using Yarn
+# ou
 yarn ios
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+---
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+## 🛠️ Estrutura de Componentes
 
-## Step 3: Modify your app
+* `App.tsx`: Componente principal que renderiza o feed
+* `src/lista/index.jsx`: Componente que representa cada item da lista (post)
+* `src/img/`: Imagens locais como ícones de like e botão de envio
 
-Now that you have successfully run the app, let's make changes!
+---
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+## 🖼️ Imagens de exemplo
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+As imagens e perfis são carregados de forma remota a partir do site [sujeitoprogramador.com](https://sujeitoprogramador.com).
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+---
 
-## Congratulations! :tada:
+## ♻️ Fast Refresh
 
-You've successfully run and modified your React Native App. :partying_face:
+O app suporta **Fast Refresh**, ou seja, atualiza automaticamente quando você salva alterações nos arquivos.
 
-### Now what?
+### Recarga manual
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+* **Android**: Pressione <kbd>R</kbd> duas vezes no terminal ou use <kbd>Ctrl</kbd> + <kbd>M</kbd> para abrir o menu de desenvolvedor.
+* **iOS**: Pressione <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> no simulador.
 
-# Troubleshooting
+---
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+## 🧪 Testado em
 
-# Learn More
+* ✅ React Native CLI
+* ✅ Dispositivo Android físico
+* ✅ Emulador Android
+* (iOS não testado, mas suportado)
 
-To learn more about React Native, take a look at the following resources:
+---
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+## 📚 Saiba mais
+
+* [Documentação Oficial](https://reactnative.dev/docs/getting-started)
+* [Integração com apps existentes](https://reactnative.dev/docs/integration-with-existing-apps)
+* [Fast Refresh](https://reactnative.dev/docs/fast-refresh)
+
+---
+
+## 🐛 Suporte e Problemas
+
+Se você tiver qualquer dificuldade, consulte:
+
+* [React Native Troubleshooting](https://reactnative.dev/docs/troubleshooting)
+* [Issues no GitHub](https://github.com/jefferson-barroso/Feed-Insta/issues)
+
+---
+
+## 🎉 Parabéns!
+
+Você está usando e modificando um app React Native funcional. Aproveite para praticar e evoluir!
+
+---
+
+> Projeto criado para fins de estudo e prática com React Native.
+
+```
+
